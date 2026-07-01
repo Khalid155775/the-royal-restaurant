@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Online Payment</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="online-payment-page">
+        <section class="online-payment-shell">
+            <div class="online-payment-banner">
+                Please copy the restaurant account number for your chosen payment method, click the brand logo to make your transfer, then input your account information below and click 'WhatsApp Share' to confirm your order.
+            </div>
+
+            <div class="online-payment-grid">
+                <div class="payment-card payment-receiving-card">
+                    <div class="payment-section-heading">
+                        <p class="checkout-eyebrow">RECEIVING ACCOUNTS</p>
+                        <h2>Restaurant Payment Accounts</h2>
+                    </div>
+
+                    <div class="account-list">
+                        <div class="account-row">
+                            <div>
+                                <strong>Paypal</strong>
+                                <p>paypal-royal@restaurant.com</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="paypal-royal@restaurant.com">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>Google Pay</strong>
+                                <p>+8801717193544</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="+8801717193544">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>Stripe</strong>
+                                <p>strp_live_royal</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="strp_live_royal">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>Bank</strong>
+                                <p>Royal Bank A/C: 1234567890</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="Royal Bank A/C: 1234567890">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>bKash</strong>
+                                <p>01717193544</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="01717193544">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>Nagad</strong>
+                                <p>01717193544</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="01717193544">Copy</button>
+                        </div>
+                        <div class="account-row">
+                            <div>
+                                <strong>Rocket</strong>
+                                <p>01717193544-1</p>
+                            </div>
+                            <button type="button" class="copy-account-btn" data-copy="01717193544-1">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-card payment-customer-card">
+                    <div class="payment-section-heading">
+                        <p class="checkout-eyebrow">CUSTOMER PAYMENT</p>
+                        <h2>Choose Your Provider</h2>
+                    </div>
+
+                    <div class="provider-grid">
+                        <div class="provider-item" data-url="https://paypal.com" data-provider="PayPal">
+                            <button type="button" class="provider-button provider-paypal" data-url="https://paypal.com" data-provider="PayPal">
+                                <span class="provider-logo">PayPal</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>PayPal Txn ID</span>
+                                <input type="text" class="provider-input" data-provider="PayPal" placeholder="Enter PayPal Txn ID or account">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://google.com" data-provider="Google Pay">
+                            <button type="button" class="provider-button provider-google" data-url="https://google.com" data-provider="Google Pay">
+                                <span class="provider-logo">GPay</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>Google Pay Number</span>
+                                <input type="text" class="provider-input" data-provider="Google Pay" placeholder="Enter Google Pay number or Txn ID">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://stripe.com" data-provider="Stripe">
+                            <button type="button" class="provider-button provider-stripe" data-url="https://stripe.com" data-provider="Stripe">
+                                <span class="provider-logo">Stripe</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>Stripe Txn ID</span>
+                                <input type="text" class="provider-input" data-provider="Stripe" placeholder="Enter Stripe transaction ID">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://centralbank.org.bd" data-provider="Bank Transfer">
+                            <button type="button" class="provider-button provider-bank" data-url="https://centralbank.org.bd" data-provider="Bank Transfer">
+                                <span class="provider-logo">Bank</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>Bank Ref/Account</span>
+                                <input type="text" class="provider-input" data-provider="Bank Transfer" placeholder="Enter bank ref or account number">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://bkash.com" data-provider="bKash">
+                            <button type="button" class="provider-button provider-bkash" data-url="https://bkash.com" data-provider="bKash">
+                                <span class="provider-logo">bKash</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>bKash Txn ID</span>
+                                <input type="text" class="provider-input" data-provider="bKash" placeholder="Enter bKash transaction ID">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://nagad.com.bd" data-provider="Nagad">
+                            <button type="button" class="provider-button provider-nagad" data-url="https://nagad.com.bd" data-provider="Nagad">
+                                <span class="provider-logo">Nagad</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>Nagad Txn ID</span>
+                                <input type="text" class="provider-input" data-provider="Nagad" placeholder="Enter Nagad transaction ID">
+                            </label>
+                        </div>
+
+                        <div class="provider-item" data-url="https://dutchbanglabank.com" data-provider="Rocket">
+                            <button type="button" class="provider-button provider-rocket" data-url="https://dutchbanglabank.com" data-provider="Rocket">
+                                <span class="provider-logo">Rocket</span>
+                            </button>
+                            <label class="provider-input-wrap">
+                                <span>Rocket Txn ID</span>
+                                <input type="text" class="provider-input" data-provider="Rocket" placeholder="Enter Rocket transaction ID">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="online-payment-summary" id="online-payment-summary"></div>
+                    <button type="button" class="checkout-btn online-payment-btn" id="confirm-online-payment-btn">CONFIRM & SHARE VIA WHATSAPP</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="shopping-cart" id="shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="menu.html">MENU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>

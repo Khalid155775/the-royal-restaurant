@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Reserve</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="reserve-page">
+        <section class="reserve-hero">
+            <p class="reserve-eyebrow">RESERVE WITH INTENTION</p>
+            <h1>Choose your seating, date, and bespoke service moment.</h1>
+            <p>Your evening will be crafted with quiet elegance, from the first greeting to the final course.</p>
+        </section>
+
+        <section class="reservation-card">
+            <form class="reservation-form" id="reservation-form">
+                <div class="form-grid">
+                    <label class="form-field">
+                        <span>Name</span>
+                        <input type="text" id="reserve-name" name="name" placeholder="Your full name" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Phone</span>
+                        <input type="tel" id="reserve-phone" name="phone" placeholder="Phone number" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Guests</span>
+                        <select id="reserve-guests" name="guests">
+                            <option value="1 Guest">1 Guest</option>
+                            <option value="2 Guests">2 Guests</option>
+                            <option value="3 Guests">3 Guests</option>
+                            <option value="4+ Guests">4+ Guests</option>
+                        </select>
+                    </label>
+                    <label class="form-field">
+                        <span>Date / Time</span>
+                        <input type="datetime-local" id="reserve-datetime" name="datetime">
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section class="experience-map-section">
+            <div class="experience-copy">
+                <p class="section-label">EXPERIENCE MAP</p>
+                <div class="experience-list">
+                    <div>
+                        <h3>Window View</h3>
+                        <p>Panoramic city light and an intimate table for the evening's best moments.</p>
+                    </div>
+                    <div>
+                        <h3>VIP Lounge</h3>
+                        <p>Private comfort, elevated service, and a discreet setting for celebratory dining.</p>
+                    </div>
+                    <div>
+                        <h3>Couple Booth</h3>
+                        <p>Soft lighting and a romantic layout designed for unforgettable conversations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-selector">
+                <p class="selector-title">Select a zone on our seating map</p>
+                <div class="zone-buttons" id="zone-buttons">
+                    <button type="button" class="zone-btn" data-zone="Window View">Window View</button>
+                    <button type="button" class="zone-btn" data-zone="VIP Lounge">VIP Lounge</button>
+                    <button type="button" class="zone-btn" data-zone="Couple Booth">Couple Booth</button>
+                    <button type="button" class="zone-btn" data-zone="Chef Counter">Chef Counter</button>
+                </div>
+                <p class="selected-zone" id="selected-zone">Selected zone: None</p>
+            </div>
+        </section>
+
+        <div class="reservation-actions">
+            <button class="btn btn-primary" id="confirm-reservation-btn" type="button">CONFIRM RESERVATION</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="menu.html">MENU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Patisserie</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PATISSERIE PAGE CONTENT -->
+    <main class="food-page">
+        <div class="section-heading">
+            <div class="section-title">
+                <p class="section-label">SWEET INDULGENCE</p>
+                <h2>Patisserie Collection</h2>
+                <p class="section-description">Indulge in our elegant pastry selection, designed to delight every luxury dessert lover.</p>
+            </div>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+            </div>
+        </div>
+
+        <div class="food-grid">
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/b-w.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Belgian Waffles</h3>
+                        <span class="food-card-price">$9.00</span>
+                    </div>
+                    <p class="food-card-description">Warm crisp waffles topped with berries, cream and maple drizzle.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Sweet</span>
+                        <span class="food-tag">Classic</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Belgian Waffles">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/a-pie.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Classic Apple Pie</h3>
+                        <span class="food-card-price">$8.50</span>
+                    </div>
+                    <p class="food-card-description">Flaky pastry filled with cinnamon apples and caramel glaze.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Warm</span>
+                        <span class="food-tag">Cozy</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Classic Apple Pie">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/c-l-cake.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Chocolate Lava Cake</h3>
+                        <span class="food-card-price">$10.00</span>
+                    </div>
+                    <p class="food-card-description">Rich molten cake with a velvety dark chocolate center.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Decadent</span>
+                        <span class="food-tag">Premium</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Chocolate Lava Cake">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/c-w-c.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Cream White Cupcake</h3>
+                        <span class="food-card-price">$4.50</span>
+                    </div>
+                    <p class="food-card-description">Light vanilla cupcake topped with silky white frosting.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Delicate</span>
+                        <span class="food-tag">Sweet</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Cream White Cupcake">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/f-b.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">French Baguette</h3>
+                        <span class="food-card-price">$5.00</span>
+                    </div>
+                    <p class="food-card-description">Freshly baked baguette with a crisp crust and soft interior.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Fresh</span>
+                        <span class="food-tag">Artisan</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="French Baguette">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/f-c.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Fruit Croissant</h3>
+                        <span class="food-card-price">$6.50</span>
+                    </div>
+                    <p class="food-card-description">Buttery croissant filled with fresh seasonal fruit and cream.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Flaky</span>
+                        <span class="food-tag">Sweet</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Fruit Croissant">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/i-t.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Ice Cream Tart</h3>
+                        <span class="food-card-price">$8.00</span>
+                    </div>
+                    <p class="food-card-description">Crisp tart shell filled with velvety ice cream and berry compote.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Cool</span>
+                        <span class="food-tag">Luxury</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Ice Cream Tart">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/ma.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Assorted Macarons</h3>
+                        <span class="food-card-price">$12.00</span>
+                    </div>
+                    <p class="food-card-description">Colorful French macarons with a variety of delicate flavors.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Elegant</span>
+                        <span class="food-tag">Premium</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Assorted Macarons">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="patisserie">
+                <div class="food-card-image" style="background-image: url('royal/pictures/new.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">New York Cheesecake</h3>
+                        <span class="food-card-price">$10.50</span>
+                    </div>
+                    <p class="food-card-description">Creamy cheesecake with a buttery graham cracker crust.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Creamy</span>
+                        <span class="food-tag">Classic</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="New York Cheesecake">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- SHOPPING CART (FIXED TROLLEY) -->
+    <div class="shopping-cart" id="shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="patisserie.html">PATISSERIE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>

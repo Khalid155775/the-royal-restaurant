@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Luxury Dining Experience</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo Section (Left) -->
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <!-- Hamburger Menu Icon (Mobile Only) -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menu Links (Right) -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">LUXURY DINING EXPERIENCE</p>
+            <p class="hero-welcome">Welcome to</p>
+            <h1 class="hero-title" id="typewriter-text"></h1>
+            
+            <!-- Action Buttons -->
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="book-btn">BOOK A TABLE</button>
+                <button class="btn btn-outline" id="menu-btn">EXPLORE MENU</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SECTION -->
+    <section class="featured">
+        <div class="featured-container">
+            <!-- Card 1: Photo Gallery with Auto-Fading Slider -->
+            <div class="featured-card">
+                <div class="card-tag">SEE GALLERY</div>
+                <h2 class="card-title">Photo Gallery</h2>
+                <div class="image-slider" id="gallery-slider">
+                    <div class="slider-image active" style="background-image: url('royal/pictures/g1.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g2.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g3.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g4.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g5.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g6.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g7.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g8.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g9.jpg');"></div>
+                </div>
+                <div class="slider-dots" id="gallery-dots"></div>
+            </div>
+
+            <!-- Card 2: Our Special Menu with Auto-Fading Slider -->
+            <div class="featured-card">
+                <div class="card-tag">SEE MENU</div>
+                <h2 class="card-title">Our Special Menu</h2>
+                <div class="image-slider" id="menu-slider">
+                    <div class="slider-image active" style="background-image: url('royal/pictures/a-pie.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/b-w.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/c-b-burger.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/c-l-cake.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/c-t-masala.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/f-alfredo.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/f-b.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/g-r-steak.jpg');"></div>
+                    <div class="slider-image" style="background-image: url('royal/pictures/p-thai.jpg');"></div>
+                </div>
+                <div class="slider-dots" id="menu-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOPPING CART (FIXED TROLLEY) -->
+    <div class="shopping-cart" id="shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side: Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Quick Links -->
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="#menu">MENU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>

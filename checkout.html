@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Checkout</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="checkout-page">
+        <section class="checkout-container">
+            <div class="checkout-form-card">
+                <p class="checkout-eyebrow">DELIVERY DETAILS</p>
+                <h1>Complete your royal food order.</h1>
+                <form id="checkout-form">
+                    <label class="checkout-field">
+                        <span>Full Name</span>
+                        <input type="text" id="customer-name" required>
+                    </label>
+                    <label class="checkout-field">
+                        <span>Phone Number</span>
+                        <input type="tel" id="customer-phone" required>
+                    </label>
+                    <label class="checkout-field">
+                        <span>Full Delivery Address</span>
+                        <textarea id="customer-address" rows="5" required></textarea>
+                    </label>
+                </form>
+            </div>
+
+            <div class="checkout-summary-card">
+                <p class="checkout-eyebrow">ORDER SUMMARY</p>
+                <h2>Your final receipt</h2>
+                <div id="checkout-items" class="checkout-items"></div>
+                <div class="checkout-divider"></div>
+                <div class="checkout-row"><span>Subtotal</span><strong id="checkout-subtotal">$0.00</strong></div>
+                <div class="checkout-row"><span>Tax (8%)</span><strong id="checkout-tax">$0.00</strong></div>
+                <div class="checkout-row grand-total"><span>Grand Total</span><strong id="checkout-total">$0.00</strong></div>
+                <button type="button" class="checkout-btn" id="place-order-btn">PLACE ORDER VIA WHATSAPP</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="menu.html">MENU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="payment-modal-overlay" id="payment-modal-overlay" aria-hidden="true">
+        <div class="payment-modal" id="payment-modal" role="dialog" aria-modal="true" aria-labelledby="payment-modal-title">
+            <button class="payment-modal-close" id="close-payment-modal" aria-label="Close payment modal">×</button>
+            <div class="payment-modal-header">
+                <p class="checkout-eyebrow">PAYMENT STEP</p>
+                <h3 id="payment-modal-title">Choose Payment Method</h3>
+                <p class="payment-modal-subtitle">Select payment method to finish your order.</p>
+            </div>
+
+            <div class="payment-method-list">
+                <label class="payment-method-option active" for="payment-hand-cash">
+                    <div class="payment-method-radio">
+                        <input type="radio" id="payment-hand-cash" name="payment-method" value="hand-cash" checked>
+                        <span class="payment-radio-mark"></span>
+                    </div>
+                    <div>
+                        <strong>Hand Cash</strong>
+                        <p>Pay with cash when the order arrives.</p>
+                    </div>
+                </label>
+
+                <label class="payment-method-option" for="payment-online">
+                    <div class="payment-method-radio">
+                        <input type="radio" id="payment-online" name="payment-method" value="online-payment">
+                        <span class="payment-radio-mark"></span>
+                    </div>
+                    <div>
+                        <strong>Online Payment</strong>
+                        <p>Pay via PayPal or card securely.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="payment-modal-actions">
+                <button type="button" class="payment-back-btn" id="payment-back-btn">Back</button>
+                <button type="button" class="payment-confirm-btn" id="payment-confirm-btn">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>

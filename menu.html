@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Restaurant - Menu</title>
+    <link rel="stylesheet" href="royal/css/style.css?v=3.5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="logo-box">T</div>
+                <span class="restaurant-name">The Royal Restaurant</span>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="patisserie.html" class="nav-link">PATISSERIE</a></li>
+                <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MENU PAGE CONTENT -->
+    <main class="food-page">
+        <div class="section-heading">
+            <div class="section-title">
+                <p class="section-label">CURATED FLAVORS</p>
+                <h2>Our Signature Menu</h2>
+                <p class="section-description">A refined collection of starters and main courses, crafted to deliver a memorable luxury dining experience.</p>
+            </div>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="starters">STARTERS</button>
+                <button class="filter-btn" data-filter="main-course">MAIN COURSE</button>
+            </div>
+        </div>
+
+        <div class="food-grid">
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/c-b-burger.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Cheese Bacon Burger</h3>
+                        <span class="food-card-price">$14.00</span>
+                    </div>
+                    <p class="food-card-description">Juicy premium burger with melted cheese, smoked bacon and signature sauce.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Premium</span>
+                        <span class="food-tag">Rich</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Cheese Bacon Burger">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/p-thai.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Pad Thai</h3>
+                        <span class="food-card-price">$16.00</span>
+                    </div>
+                    <p class="food-card-description">A fragrant noodle dish tossed with tamarind, peanuts, shrimp and fresh herbs.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Premium</span>
+                        <span class="food-tag">Savory</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Pad Thai">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/n-pizza.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Neapolitan Pizza</h3>
+                        <span class="food-card-price">$18.00</span>
+                    </div>
+                    <p class="food-card-description">Stone-baked pizza with fresh tomato, basil, mozzarella and olive oil.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Classic</span>
+                        <span class="food-tag">Premium</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Neapolitan Pizza">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="starters">
+                <div class="food-card-image" style="background-image: url('royal/pictures/m-tacos.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Mexican Tacos</h3>
+                        <span class="food-card-price">$12.00</span>
+                    </div>
+                    <p class="food-card-description">Three soft tacos loaded with spiced meat, salsa fresca and avocado crema.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Vibrant</span>
+                        <span class="food-tag">Fresh</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Mexican Tacos">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/g-r-steak.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Garlic Ribeye Steak</h3>
+                        <span class="food-card-price">$28.00</span>
+                    </div>
+                    <p class="food-card-description">Tender ribeye steak finished with garlic butter and herb jus.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Rich</span>
+                        <span class="food-tag">Premium</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Garlic Ribeye Steak">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/f-alfredo.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Fettuccine Alfredo</h3>
+                        <span class="food-card-price">$15.00</span>
+                    </div>
+                    <p class="food-card-description">Creamy fettuccine pasta tossed with parmesan and black pepper.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Creamy</span>
+                        <span class="food-tag">Comfort</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Fettuccine Alfredo">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/c-t-masala.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Chicken Tikka Masala</h3>
+                        <span class="food-card-price">$17.00</span>
+                    </div>
+                    <p class="food-card-description">Aromatic chicken in a rich tomato cream sauce with warm spices.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Spicy</span>
+                        <span class="food-tag">Premium</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Chicken Tikka Masala">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="main-course">
+                <div class="food-card-image" style="background-image: url('royal/pictures/f-c.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Fish and Chips</h3>
+                        <span class="food-card-price">$14.50</span>
+                    </div>
+                    <p class="food-card-description">Crisp battered fish served with golden fries and tangy tartar sauce.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Classic</span>
+                        <span class="food-tag">Comfort</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Fish and Chips">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="starters">
+                <div class="food-card-image" style="background-image: url('royal/pictures/d-sum.jpg');"></div>
+                <div class="food-card-content">
+                    <div class="food-card-title-row">
+                        <h3 class="food-card-title">Steamed Dim Sum</h3>
+                        <span class="food-card-price">$11.00</span>
+                    </div>
+                    <p class="food-card-description">Delicate dumplings filled with savory pork and shrimp, steamed to perfection.</p>
+                    <div class="food-tags">
+                        <span class="food-tag">Light</span>
+                        <span class="food-tag">Elegant</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-add" data-name="Steamed Dim Sum">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- SHOPPING CART (FIXED TROLLEY) -->
+    <div class="shopping-cart" id="shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-box">T</div>
+                    <span class="footer-restaurant-name">The Royal Restaurant</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="menu.html">MENU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Royal Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="royal/js/main.js?v=3.5"></script>
+</body>
+</html>
