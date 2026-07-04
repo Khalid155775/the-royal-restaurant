@@ -746,6 +746,7 @@ function initOnlinePaymentPage() {
     const providerItems = document.querySelectorAll('.provider-item');
     const confirmButton = document.getElementById('confirm-online-payment-btn');
     const summary = document.getElementById('online-payment-summary');
+    const banner = document.getElementById('online-payment-banner');
 
     if (!copyButtons.length && !providerItems.length && !confirmButton) {
         return;
@@ -756,6 +757,9 @@ function initOnlinePaymentPage() {
     const tax = subtotal * 0.08;
     const total = subtotal + tax;
     const storedCustomer = JSON.parse(localStorage.getItem(CUSTOMER_INFO_KEY) || 'null');
+    const lockWarningMessage = "Please input your account info and click the 'CONFIRM & SHARE VIA WHATSAPP' button below to log your order details first!";
+    const unlockedBannerMessage = 'Order logged! Now click your selected payment method logo above to transfer funds, or use the bottom navigation to return.';
+    let paymentUnlocked = sessionStorage.getItem('royalOnlinePaymentUnlocked') === 'true';
 
     if (summary) {
         summary.innerHTML = `
@@ -763,6 +767,27 @@ function initOnlinePaymentPage() {
             <strong>${formatCurrency(total)}</strong>
         `;
     }
+
+    function syncPaymentLockState() {
+        providerItems.forEach(item => {
+            const button = item.querySelector('.provider-button');
+            item.classList.toggle('locked', !paymentUnlocked);
+            item.classList.toggle('unlocked', paymentUnlocked);
+            item.setAttribute('data-locked', String(!paymentUnlocked));
+
+            if (button) {
+                button.classList.toggle('locked', !paymentUnlocked);
+                button.setAttribute('aria-disabled', String(!paymentUnlocked));
+                button.setAttribute('data-locked', String(!paymentUnlocked));
+            }
+        });
+
+        if (banner) {
+            banner.textContent = paymentUnlocked ? unlockedBannerMessage : lockWarningMessage;
+        }
+    }
+
+    syncPaymentLockState();
 
     copyButtons.forEach(button => {
         button.onclick = async (event) => {
@@ -808,6 +833,12 @@ function initOnlinePaymentPage() {
                 event.preventDefault();
                 event.stopPropagation();
             }
+
+            if (!paymentUnlocked) {
+                alert(lockWarningMessage);
+                return;
+            }
+
             const url = button?.dataset.url || item.dataset.url;
             if (url) {
                 window.open(url, '_blank', 'noopener,noreferrer');
@@ -815,28 +846,28 @@ function initOnlinePaymentPage() {
         };
 
         if (button) {
-            button.onclick = openProvider;
+            button.addEventListener('click', openProvider);
         }
 
-        item.onclick = (event) => {
+        item.addEventListener('click', (event) => {
             if (event.target.closest('.provider-input')) {
                 return;
             }
             openProvider(event);
-        };
+        });
 
         if (input) {
-            input.onfocus = () => {
+            input.addEventListener('focus', () => {
                 item.classList.add('focused');
-            };
-            input.onblur = () => {
+            });
+            input.addEventListener('blur', () => {
                 item.classList.remove('focused');
-            };
+            });
         }
     });
 
     if (confirmButton) {
-        confirmButton.onclick = (event) => {
+        confirmButton.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
 
@@ -850,15 +881,15 @@ function initOnlinePaymentPage() {
                 return;
             }
 
+            paymentUnlocked = true;
+            sessionStorage.setItem('royalOnlinePaymentUnlocked', 'true');
+            syncPaymentLockState();
+
             const businessNumber = '+8801717193544';
             const customerDetails = storedCustomer || { name: 'Not provided', phone: 'Not provided', address: 'Not provided' };
             const message = `👑 *The Royal Restaurant - Online Payment Confirmation* 👑%0A-----------------------------------------%0A👤 *Customer Name:* ${encodeURIComponent(customerDetails.name || 'Not provided')}%0A📞 *Phone:* ${encodeURIComponent(customerDetails.phone || 'Not provided')}%0A📍 *Delivery Address:* ${encodeURIComponent(customerDetails.address || 'Not provided')}%0A💵 *Total Amount:* ${encodeURIComponent(formatCurrency(total))}%0A💳 *Paid Via:* ${encodeURIComponent(selectedProvider)}%0A🆔 *Customer Account/Txn ID:* ${encodeURIComponent(customerInfo)}%0A-----------------------------------------%0A*Please verify the payment and confirm my order!*`;
-            window.open(`https://wa.me/${businessNumber.replace(/[^0-9]/g, '')}?text=${message}`, '_blank');
-            localStorage.removeItem(CART_KEY);
-            cartItems = [];
-            updateCartBadge();
-            window.location.href = 'success.html';
-        };
+            window.open(`https://wa.me/${businessNumber.replace(/[^0-9]/g, '')}?text=${message}`, '_blank', 'noopener,noreferrer');
+        });
     }
 }
 
